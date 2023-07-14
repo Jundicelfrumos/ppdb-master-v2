@@ -9,7 +9,6 @@
   }
   
   body {
-    font-family: Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     display: grid;
     place-items: center;
@@ -135,17 +134,17 @@
     gap: 1.5rem;
   }
   
-  .btn {
+  /* .btn {
     padding: 0.75rem;
     display: block;
     text-decoration: none;
-    background-color: var(--primary-color);
-    color: #f3f3f3;
+    color: #fff;
     text-align: center;
     border-radius: 0.25rem;
     cursor: pointer;
     transition: 0.3s;
-  }
+  } */
+
   .btn-next{
     background-color: #0D6EFD !important;
     

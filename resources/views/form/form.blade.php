@@ -109,7 +109,7 @@
                             <input type="text" name="nama_sekolah_dasar" id="elementary_school" />
                         </div>
                         <div class="input-group">
-                            <label for="junior_high_school">Nama Sekolah Menengah</label>
+                            <label for="junior_high_school">Nama Sekolah Menengah Pertama/MTS</label>
                             <input type="text" name="nama_sekolah_menengah" id="junior_high_school" />
                         </div>
                         <div class="form-group">
@@ -306,11 +306,11 @@
                         <div class="form-group">
                             <label for="fathers_job">Jumlah hapalan alquran</label>
                             <select class="form-select" aria-label="fathers_job" name="hafalan" id="hafalan">
-                                <option value="1">1 juz</option>
-                                <option value="2">Pegawai negeri sipil</option>
-                                <option value="2">Wirausaha</option>
-                                <option value="2">Tidak bekerja</option>
-                                <option value="2">Tentara</option>
+                                <option value="1">1 Juz</option>
+                                <option value="2">1-5 Juz</option>
+                                <option value="2">5-10 Juz</option>
+                                <option value="2">10-20 Juz</option>
+                                <option value="2">20-30 Juz</option>
                             </select>
                         </div>
                         <div class="row justify-content-end d-flex">

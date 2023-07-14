@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdminFormController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\PaymentController;
 /*
@@ -25,6 +28,14 @@ Route::get('/contact-us', function () {
 
 Route::get('/news', function () {
     return view('news');
+});
+
+// Route::get('/admin-news', function () {
+//     return view('admin.manajemen-news');
+// });
+
+Route::get('/edit-news', function () {
+    return view('admin.edit-news');
 });
 
 Route::get('/ppdb', function () {
@@ -63,6 +74,18 @@ Route::get('/parent', function () {
     return view('parent');
 });
 
+Route::get('/atph', function () {
+    return view('major\atph');
+});
+
+Route::get('/rpl', function () {
+    return view('major\rpl');
+});
+
+Route::get('/kgsp', function () {
+    return view('major\kgsp');
+});
+
 
 Route::get('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/register', [AuthController::class, 'registerPost'])->name('register');
@@ -70,8 +93,23 @@ Route::post('/register', [AuthController::class, 'registerPost'])->name('registe
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'loginPost'])->name('login');
 
+route::get('/register-admin', [AdminController::class, 'register'])->name('register-admin');
+route::post('/register-admin', [AdminController::class, 'postregister'])->name('register-admin');
+route::get('/login-admin', [AdminController::class, 'login'])->name('login-admin');
+route::post('/login-admin', [AdminController::class, 'postlogin'])->name('login-admin');
+
+// news
+
+Route::get('/admin-news', [NewsController::class, 'index'])->name('manajemen-news');
+Route::get('/create-news', [NewsController::class, 'create'])->name('create-news');
+Route::post('/simpan-news', [NewsController::class, 'store'])->name('simpan-news');
+Route::get('/edit-news/{id}', [NewsController::class, 'edit'])->name('edit-news');
+Route::post('/update-news/{id}', [NewsController::class, 'update'])->name('update-news');
+Route::get('/delete-news/{id}', [NewsController::class, 'destroy'])->name('delete-news');
 
 // form
+Route::get('/form-admin', [AdminFormController::class, 'adminformPendaftaran'])->name('form');
+Route::post('test-post', [AdminFormController::class, 'adminformPendaftaranPost'])->name('formPost');
 
 Route::get('/form-pendaftaran', [FormController::class, 'formPendaftaran'])->name('form');
 Route::post('test-post', [FormController::class, 'formPendaftaranPost'])->name('formPost');
@@ -81,3 +119,5 @@ Route::get('provinsi', [SelectedController::class, 'getKota'])->name('provinsi')
 Route::get('payment', [PaymentController::class, 'index'])->name('index');
 Route::post('paymentPost', [PaymentController::class, 'buktiTranferPost'])->name('paymentPost');
 
+// Route::group(['middleware' => ['auth']], function () {
+// });

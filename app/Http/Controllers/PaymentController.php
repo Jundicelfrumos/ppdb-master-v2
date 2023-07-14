@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Payment;
 
 use Illuminate\Http\Request;
+use Alert;
 
 class PaymentController extends Controller
 {
@@ -25,6 +26,7 @@ class PaymentController extends Controller
             'bukti_pembayaran' => $bukti
            ]);
 
-           return view ('welcome');
+           Alert::success('Pendaftaran Berhasil!','.');
+           return view ('home');
     }
 }
