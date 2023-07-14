@@ -7,8 +7,9 @@
         <div  class="main-text">
             <H1>PENERIMAAN PESERTA DIDIK BARU TAHUN 2023-2024</H1>
             <p>Daftarkan diri anda segera kuota terbatas!</p> 
-            <div class="buttons mt-3 center">
-                <a href="{{ route('form') }}" class="btn btn-warning">Pendaftaran</a> 
+            <div class="mt-3 d-flex justify-content-center">
+                <a href="{{ route('form') }}" class="btn btn-warning mx-3" style="width:150px">Pendaftaran</a> 
+                <a href="{{ route('login') }}" class="btn btn-primary mx-3 " style="width:150px">Login</a> 
             </div>
         </div>
     </div>
