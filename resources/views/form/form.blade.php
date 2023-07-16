@@ -71,15 +71,15 @@
                             <input type="text" name="no_kk" id="no_kk" />
                         </div>
                         <div class="input-group">
-                            <label for="birthplace">Tempat lahir</label>
+                            <label for="birthplace">Tempat Lahir</label>
                             <input type="text" name="tempat_lahir" id="tempat_lahir" />
                         </div>
                         <div class="input-group">
-                            <label for="dob">Tanggal lahir</label>
+                            <label for="dob">Tanggal Lahir</label>
                             <input type="date" name="tanggal_lahir" id="tanggal_lahir" />
                         </div>
                         <div class="form-group">
-                            <label for="dob">Jenis kelamin</label>
+                            <label for="dob">Jenis Kelamin</label>
                             <select class="form-select" aria-label="Jenis kelamin" name="jenis_kelamin">
                                 <option value="1">Laki laki</option>
                                 <option value="2">Perempuan</option>
@@ -93,6 +93,7 @@
                                 <option value="2">Katolik</option>
                                 <option value="2">Budha</option>
                                 <option value="2">Hindu</option>
+                                <option value="2">Konghucu</option>
                             </select>
                         </div>
                     </div>
@@ -148,7 +149,7 @@
 
         </div>
 
-        {{-- {{-- <!-- Tahap 2 data orang tua/wali --> --}}
+        <!-- Tahap 2 data orang tua/wali -->
         <div class="form-step">
             <div class="row"
                 style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); padding: 20px; margin-top: 100px; margin-bottom: 100px; border-radius: 5px;">
@@ -170,7 +171,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="fathers_income">Penghasilan ayah/wali</label>
+                            <label for="fathers_income">Penghasilan Ayah</label>
                             <select class="form-select" aria-label="fathers_income" id="pendapatan_ayah"
                                 name="pendapatan_ayah">
                                 <option value="2">Dibawah Rp.1.000.000</option>
@@ -181,11 +182,11 @@
                             </select>
                         </div>
                         <div class="input-group">
-                            <label for="fathers_nophone">No. Hp ayah/wali</label>
+                            <label for="fathers_nophone">No. Hp Ayah</label>
                             <input type="text" name="no_handphone_ayah" id="no_handphone_ayah" />
                         </div>
                         <div class="input-group">
-                            <label for="fathers_address">Alamat ayah/wali</label>
+                            <label for="fathers_address">Alamat Ayah</label>
                             <input type="text" name="alamat_ayah" id="alamat_ayah" />
                         </div>
                     </div>
@@ -193,11 +194,11 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="input-group">
-                            <label for="mothers_name">Nama ibu</label>
+                            <label for="mothers_name">Nama Ibu</label>
                             <input type="text" name="nama_ibu" id="nama_ibu" />
                         </div>
                         <div class="form-group">
-                            <label for="mothers_job">Pekerjaan ibu</label>
+                            <label for="mothers_job">Pekerjaan Ibu</label>
                             <select class="form-select" aria-label="pekerjaan_ibu" name="pekerjaan_ibu">
                                 <option value="1">Pegawai swasta</option>
                                 <option value="2">Pegawai negeri sipil</option>
@@ -207,7 +208,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="mothers_income">Penghasilan ibu</label id="pendapatan_ibu">
+                            <label for="mothers_income">Penghasilan Ibu</label id="pendapatan_ibu">
                             <select class="form-select" aria-label="mothers_income" name="pendapatan_ibu">
                                 <option value="2">Dibawah Rp.1.000.000</option>
                                 <option value="1">Rp.1.000.000 - Rp.2.000.000</option>
@@ -217,11 +218,11 @@
                             </select>
                         </div>
                         <div class="input-group">
-                            <label for="motheryyyys_nophone">No. Hp ibu</label>
+                            <label for="motheryyyys_nophone">No. Hp Ibu</label>
                             <input type="text" name="no_handphone_ibu" id="no_handphone_ibu" />
                         </div>
                         <div class="input-group">
-                            <label for="fathers_address">Alamat ibu</label>
+                            <label for="fathers_address">Alamat Ibu</label>
                             <input type="text" name="alamat_ibu" id="alamat_ibu" />
                         </div>
                     </div>
@@ -245,17 +246,17 @@
                     style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); padding: 20px;  border-radius: 5px;">
                     <div class="row">
 
-                        <h6>Upload berkas persyaratan</h6>
+                        <h6>Upload Berkas Persyaratan</h6>
                         <div class="mb-3">
-                            <label for="formFile" class="form-label">Surat keterangan lulus</label>
+                            <label for="formFile" class="form-label">Surat Keterangan Lulus</label>
                             <input class="form-control" type="file" id="skl" name="skl">
                         </div>
                         <div class="mb-3">
-                            <label for="formFile" class="form-label">Kartu keluarga</label>
+                            <label for="formFile" class="form-label">Kartu Keluarga</label>
                             <input class="form-control" type="file" id="kk" name="kk">
                         </div>
                         <div class="mb-3">
-                            <label for="formFile" class="form-label">Kemampuan berbahasa arab</label>
+                            <label for="formFile" class="form-label">Kemampuan Berbahasa Arab</label>
                             <fieldset class="range__field p-3">
                                 <input class="range" type="range" min="0" max="10" name="kemampuan_arab"
                                     id="kemampuan_arab">
@@ -279,7 +280,7 @@
                             </fieldset>
                         </div>
                         <div class="mb-3">
-                            <label for="formFile" class="form-label">Kemampuan berbahasa inggris</label>
+                            <label for="formFile" class="form-label">Kemampuan Berbahasa Inggris</label>
                             <fieldset class="range__field p-3">
                                 <input class="range" type="range" min="0" max="10" id="kemampuan_inggris"
                                     name="kemampuan_inggris">
@@ -304,7 +305,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="fathers_job">Jumlah hapalan alquran</label>
+                            <label for="fathers_job">Jumlah Hapalan Alquran</label>
                             <select class="form-select" aria-label="fathers_job" name="hafalan" id="hafalan">
                                 <option value="1">1 Juz</option>
                                 <option value="2">1-5 Juz</option>
@@ -337,20 +338,20 @@
 
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <label for="jenis_sertifikat">Jenis sertifikat</label>
+                                <label for="jenis_sertifikat">Jenis Sertifikat</label>
                                 <select class="form-select" aria-label="jenis_sertifikat"
                                     id="jenis_sertifikat" name="jenis_sertifikat">
-                                    <option value="1">Pengalaman organisasi</option>
-                                    <option value="2">Pendidikan non formal</option>
+                                    <option value="1">Pengalaman Organisasi</option>
+                                    <option value="2">Pendidikan Non Formal</option>
                                     <option value="2">Prestasi</option>
                                 </select>
                             </div>
                             <div class="input-group">
-                                <label for="nama_kegiatan">Nama kegiatan</label>
+                                <label for="nama_kegiatan">Nama Kegiatan</label>
                                 <input type="text" name="nama_kegiatan" id="nama_kegiatan" />
                             </div>
                             <div class="input-group">
-                                <label for="nama_penyelenggara">Nama institusi/penyelenggara</label>
+                                <label for="nama_penyelenggara">Nama Institusi/Penyelenggara</label>
                                 <input type="text" name="nama_penyelenggara" id="nama_penyelenggara" />
                             </div>
                             <div class="input-group">
@@ -392,22 +393,22 @@
             <div class="row justify-content-center d-flex">
                 <div class="col-lg-6"
                     style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); padding: 20px;  border-radius: 5px;">
-                    <h6>Pilih jurusan</h6>
+                    <h6>Pilih Jurusan</h6>
                     <div class="form-group">
-                        <label for="fathers_job">Pilih jenjang pendidikan</label>
+                        <label for="fathers_job">Pilih Jenjang Pendidikan</label>
                         <select class="form-select" aria-label="fathers_job" id="jenjang_pendidikan" name="jenjang_pendidikan">
                             <option value="SMK">SMK</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="pilih_jurusan_satu">Pilih jurusan 1</label>
+                        <label for="pilih_jurusan_satu">Pilih Jurusan 1</label>
                         <select class="form-select" aria-label="pilih_jurusan_satu" id="pilih_jurusan_satu" name="pilih_jurusan_satu">
                             <option value="PPLG">PPLG</option>
                             <option value="Agroteknologi">Agroteknologi</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="pilih_jurusan_dua">Pilih jurusan 2</label>
+                        <label for="pilih_jurusan_dua">Pilih Jurusan 2</label>
                         <select class="form-select" aria-label="pilih_jurusan_dua" name="pilih_jurusan_dua" id="pilih_jurusan_dua">
                             <option value="PPLG">PPLG</option>
                             <option value="Agroteknologi">Agroteknologi</option>

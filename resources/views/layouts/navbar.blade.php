@@ -34,16 +34,16 @@
                                 </ul>
                               </li>
                               <li class="nav-item">
-                                  <a class="nav-link nav-menu" style="color: black;" href="/news">News</a>
+                                  <a class="nav-link nav-menu" style="color: black;" href="/news">Berita</a>
                               </li>
                               <li class="nav-item">
-                                  <a class="nav-link nav-menu" style="color: black;" href="/contact-us">Contact Us</a>
+                                  <a class="nav-link nav-menu" style="color: black;" href="/contact-us">Kontak Kami</a>
                               </li>
                         </div>
                     </ul>
                     <div class="reglog-section mt-3">
                         <a href="/login" type="button" class="btn btn-primary rounded me-1 ms-3">Login</a>
-                        <a href="/register" type="button" class="btn btn-outline-primary rounded">Register</a>
+                        <a href="/register" type="button" class="btn btn-outline-primary rounded">Daftar</a>
                     </div>
                 </div>
             </nav>

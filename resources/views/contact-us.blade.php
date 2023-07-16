@@ -5,12 +5,12 @@
 <div class="container-fluid">
       <img src="asdf/img/sasha-set-GURzQwO8Li0-unsplash.jpg"  style="height: 650px;" class="image-fluid">
       <div  class="main-text">
-          <H1 style="font-size: 5.5rem;">Home - Contact Us</H1>
+          <H1 style="font-size: 5.5rem;">Home - Kontak Kami</H1>
       </div>
     </div>
     <div class="extra-container">
       <div class="center">
-        <h2 class="bold black-blue underlined mt-5 mb-3">Contact Us</h2>
+        <h2 class="bold black-blue underlined mt-5 mb-3">Kontak Kami</h2>
         <div class="underlined"></div>
       </div>
       <div class="p-3">
@@ -28,14 +28,17 @@
           <li><a href="https://www.facebook.com/"><img src="asdf/img/share/facebookimages.png" alt="Facebook" class="facebook-share mr-1"></a></li>
           <li><a href="https://www.twitter.com/"><img src="asdf/img/share/673524.png" alt="twitter" class="twitter-share mr-1"></a></li>
           <li><a href="https://www.tiktok.com/"><img src="asdf/img/share/tik-tok-april-tutuapp-5.png" alt="Tiktok" class="tiktok-share mr-1"></a></li>
-          <li><a href="https://www.whatsapp.com/"><img src="asdf/img/share/124034.png" alt="whatsapp" class="whatsapp-share mr-1"></a></li>
         </ul>
       </div>
     </div>
+    <a href="https://api.whatsapp.com/send?phone=51000000000&text=olá" class="whatsapp-button" target="_blank" style="position: fixed;  right: 15px; bottom: 15px;">
+      <img src="https://i.ibb.co/VgSspjY/whatsapp-button.png" alt="botão whatsapp">
+    </a>
     <div class="blue-background">
         <div class="container">
             <div class="center my-3">
-                <h5 class="text-white">© 2023 SMK Skill Village Boarding School</h5>
+                <h5 class="text-white">© 2023 SMK Skill Village Islamic School</h5>
             </div>
         </div>
     </div>
+@endsection

@@ -5,7 +5,7 @@
 <div class="container-fluid">
         <img src="asdf/img/kgsp.jpeg" class="image-fluid" style="height: 650px;">
         <div  class="main-text">
-            <H1 style="font-size: 5.5rem;">Jurusan - KGSP</H1>
+            <H1 style="font-size: 3.5rem;">Jurusan - Konstruksi Gedung Sanitasi Dan Perawatan</H1>
         </div>
     </div>
     <div class="container">

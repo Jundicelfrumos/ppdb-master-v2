@@ -5,7 +5,7 @@
 <div class="container-fluid">
         <img src="asdf/img/kimberly-farmer-lUaaKCUANVI-unsplash.jpg" class="image-fluid" style="height: 650px;">
         <div  class="main-text">
-            <H1 style="font-size: 5.5rem;">Profil Jurusan</H1>
+            <H1 style="font-size: 3.5rem;">Jurusan - Agrobisnis Tanaman Pangan Dan Hortikoltura</H1>
         </div>
     </div>
     <div class="extra-container">

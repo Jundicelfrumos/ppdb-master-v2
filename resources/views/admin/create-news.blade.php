@@ -1,4 +1,4 @@
-@extends('admin.main')
+@extends('admin.main-news')
 @include('admin.navbar')
 @include('admin.sidebar')
 @section('main-admin')
@@ -23,7 +23,7 @@
                           </div>
                           <div class="mb-3">
                             <label for="caption" class="form-label">caption</label>
-                            <textarea class="form-control" id="caption" name="caption" rows="3"></textarea>
+                            <textarea class="form-control summernote" id="caption" name="caption" rows="3"></textarea>
                           </div>
                           <div class="input-group">
                             <label for="tanggal">Tanggal/Bulan/Tahun</label>
@@ -42,5 +42,20 @@
       </div>
     </div>
   </div>  
-
+  <script>
+      $('.summernote').summernote({
+        placeholder: 'Hello stand alone ui',
+        tabsize: 2,
+        height: 120,
+        toolbar: [
+          ['style', ['style']],
+          ['font', ['bold', 'underline', 'clear']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['table', ['table']],
+          ['insert', ['link', 'picture', 'video']],
+          ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+      });
+    </script>
 @endsection

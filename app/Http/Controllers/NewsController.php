@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\news;
+use App\Models\News;
 
 class NewsController extends Controller
 {
@@ -12,9 +12,20 @@ class NewsController extends Controller
      */
     public function index()
     {
-        //
         $berita = News::all();
         return view ('admin.manajemen-news',compact('berita'));
+    }
+
+    public function indexView()
+    {
+        $berita = News::all();
+        return view ('news',compact('berita'));
+    }
+
+    public function indexHome()
+    {
+        $berita = News::all();
+        return view ('home',compact('berita'));
     }
 
     /**
@@ -22,7 +33,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        //
+       
         return view ('admin.create-news');
     }
 
@@ -52,7 +63,7 @@ class NewsController extends Controller
         $dtUpload->gambar = $namaFile;
         $dtUpload->tanggal = $request->tanggal;
 
-        $nm->move(public_path().'/images', $namaFile);
+        $nm->move(public_path().'/images/news/', $namaFile);
         $dtUpload->save();
 
         // News::create([
@@ -62,7 +73,6 @@ class NewsController extends Controller
         //     'tanggal' => $request->tanggal,
         // ]);
         
-
         return redirect ('admin-news');
     }
 
@@ -71,8 +81,10 @@ class NewsController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $berita = News::findOrFail($id);
+        return view ('detail-news',compact('berita'));
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -80,8 +92,8 @@ class NewsController extends Controller
     public function edit(string $id)
     {
         //
-        $ingfo = News::findorfail($id);
-        return view ('admin.edit-news',compact('ingfo'));
+        $news = News::findorfail($id);
+        return view ('admin.edit-news',compact('news'));
     }
 
     /**
@@ -89,17 +101,15 @@ class NewsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $ingfo = News::find($id);
-    
-
-        $ingfo->update();
-        return redirect('admin-news');
-
+        // $ingfo = News::find($id);
+        // $ingfo->update();
+        // return redirect('admin-news');
         // $ingfo->update($request->all());
-        // return redirect ('admin-news')->with('toast-_success','Data Berhasil Diupdate');
 
         // $ubah = News::findorfail($id);
         // $awal = $ubah->gambar;
+        // $filename = $awal->getClientOriginalName();
+        // $awal->move(public_path().'/images', $filename);
 
         // $ingfo = [
         //     'judul' => $request['judul'],
@@ -107,9 +117,34 @@ class NewsController extends Controller
         //     'gambar' => $awal,
         //     'tanggal' => $request['tanggal'],
         // ];
-        // $request->gambar->move(public_path().'/images', $awal);
-        // $ubah->update($ingfo);
         
+        // $ubah->update($ingfo); 
+
+
+        $news = News::findOrFail($id);
+        $gambar = $news->gambar;
+        
+        $filename = $request->file('gambar')->getClientOriginalName();
+        $save = $request->gambar->move(public_path('storage/images/news/'), $filename);
+        $gambarPath = '/storage/images/news/' . $filename;
+        //$request->image->storeAs('images', $imageName);
+          
+        
+        
+        $news->update([
+            'judul' => $request['judul'],
+            'caption' => $request['caption'],
+            'gambar' => $gambarPath,
+            'tanggal' => $request['tanggal'],
+        ]);
+        
+        // dd($news);
+        // return redirect()->back()->with("OK", "Berhasil mengubah data");
+
+
+
+
+
         return redirect('admin-news');
     }
 

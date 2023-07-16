@@ -17,17 +17,8 @@ use App\Http\Controllers\PaymentController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    return view('home');
-});
-
 Route::get('/contact-us', function () {
     return view('contact-us');
-});
-
-Route::get('/news', function () {
-    return view('news');
 });
 
 // Route::get('/admin-news', function () {
@@ -99,7 +90,9 @@ route::get('/login-admin', [AdminController::class, 'login'])->name('login-admin
 route::post('/login-admin', [AdminController::class, 'postlogin'])->name('login-admin');
 
 // news
-
+Route::get('/', [NewsController::class, 'indexHome'])->name('news');
+Route::get('/news', [NewsController::class, 'indexView'])->name('news');
+Route::get('/detail-news/{id}', [NewsController::class, 'show'])->name('berita');
 Route::get('/admin-news', [NewsController::class, 'index'])->name('manajemen-news');
 Route::get('/create-news', [NewsController::class, 'create'])->name('create-news');
 Route::post('/simpan-news', [NewsController::class, 'store'])->name('simpan-news');

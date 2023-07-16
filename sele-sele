@@ -1,0 +1,32 @@
+$news = News::findorfail($id);
+        $request->gambar->move(public_path().'/images', $awal);
+    
+        if($request->gambar != ''){        
+            $path = public_path().'/images';
+  
+            //code for remove old file
+            if($news->gambar != ''  && $news->gambar != null){
+                 $file_old = $path.$news->gambar;
+                 unlink($file_old);
+            }
+  
+            //upload new file
+            $file = $request->gambar;
+            $filename = $file->getClientOriginalName();
+            $file->move($path, $filename);
+  
+            //for update in table
+           // $news->update(['gambar' => $filename]);
+       }
+
+        $updateNews = [
+            'judul' => $request['judul'],
+            'caption' => $request['caption'],
+            'gambar' => $filename,
+            'tanggal' => $request['tanggal'],
+        ];
+        
+        $news->update($updateNews);
+
+    
+        return redirect('admin-news');

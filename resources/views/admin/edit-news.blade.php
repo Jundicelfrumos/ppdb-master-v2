@@ -1,4 +1,4 @@
-@extends('admin.main')
+@extends('admin.main-news')
 @include('admin.navbar')
 @include('admin.sidebar')
 @section('main-admin')
@@ -11,26 +11,26 @@
                 <h6>Edit Berita</h6>
                 <div class="col-lg-12">
                     <div class="row">
-                      <form action="{{url('update-news', $ingfo->id)}}" method="post" enctype="multipart/form-data">
+                      <form action="{{url('update-news', $news->id)}}" method="post" enctype="multipart/form-data">
                         {{@csrf_field()}}
                           <div class="input-group">
                             <label for="judul">Judul Berita</label>
-                            <input type="text" name="judul" id="judul" value="{{ $ingfo->judul }}">
+                            <input type="text" name="judul" id="judul" value="{{ $news->judul }}">
                           </div>
                           <div class="mb-3">
                             <label for="gambar" class="form-label">Input Gambar</label>
-                            <input class="form-control" type="file" id="gambar" name="gambar" value="{{ $ingfo->gambar }}">
+                            <input class="form-control" type="file" id="gambar" name="gambar" value="{{ $news->gambar }}">
                           </div>
                           <div class="mb-3">
-                            <img src="{{asset('images/'. $ingfo->gambar)}}" class="my-2" wiingfoh="80%" height="60px" style="border-radius:5px">
+                            <img src="{{asset('images/'. $news->gambar)}}" class="my-2" wiingfoh="80%" height="60px" style="border-radius:5px">
                           </div>
                           <div class="mb-3">
                             <label for="caption" class="form-label">caption</label>
-                            <textarea class="form-control" id="caption" name="caption" rows="3">{{ $ingfo->caption }}</textarea>
+                            <textarea class="form-control summernote" id="caption" name="caption" rows="3" value= "{!!$news->caption!!}"></textarea>
                           </div>
                           <div class="input-group">
                             <label for="tanggal">Tanggal/Bulan/Tahun</label>
-                            <input type="date" name="tanggal" id="tanggal" value="{{$ingfo->tanggal}}">
+                            <input type="date" name="tanggal" id="tanggal" value="{{$news->tanggal}}">
                           </div>
                           <div class="input-group">
                             <button class="btn btn-success" type="submit">Ubah Data</button>
@@ -43,5 +43,20 @@
           </div>
         </section>
 </div>  
-
+<script>
+      $('.summernote').summernote({
+        placeholder: 'Hello stand alone ui',
+        tabsize: 2,
+        height: 120,
+        toolbar: [
+          ['style', ['style']],
+          ['font', ['bold', 'underline', 'clear']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['table', ['table']],
+          ['insert', ['link', 'picture', 'video']],
+          ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+      });
+    </script>
 @endsection

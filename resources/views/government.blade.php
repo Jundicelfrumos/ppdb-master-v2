@@ -27,7 +27,7 @@
         <div class="justify-content-start mt-3 mb-5"data-aos="fade-up">
             <h5 class="bold black-blue">4. Program terkait Goverment</h5>
             <ol class="my-3" style="font-family:rubik">
-                <li>Menjadikan Skill Village Boarding School Tempat Uji Kompetensi dunia usaha dan pemerintah daerah.</li>
+                <li>Menjadikan Skill Village Islamic School Tempat Uji Kompetensi dunia usaha dan pemerintah daerah.</li>
                 <li>Kerjasama sekolah langsung dengan pemerintahan Kabupaten, Kecamatan, Desa, Dusun, RW dan RT dibidang tatakelola, pengembangan SDM, BUMDes, UMKM, Pertanian, Tenaga Kerja, dan lainnya yang terkait.</li>
                 <li>Program organisasi siswa intra sekolah bekerja sama dengan pemerintahan daerah sampai tingkat RT.</li>
             </ol>
@@ -36,7 +36,7 @@
     <div class="blue-background">
         <div class="container">
             <div class="center my-3">
-                <h5 class="text-white">© 2023 SMK Skill Village Boarding School</h5>
+                <h5 class="text-white">© 2023 SMK Skill Village Islamic School</h5>
             </div>
         </div>
     </div>

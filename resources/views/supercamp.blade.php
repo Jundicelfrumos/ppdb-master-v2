@@ -64,7 +64,7 @@
     <div class="blue-background">
         <div class="container">
             <div class="center my-2">
-                <h5 class="text-white">© 2023 SMK Skill Village Boarding School</h5>
+                <h5 class="text-white">© 2023 SMK Skill Village Islamic School</h5>
             </div>
         </div>
     </div>

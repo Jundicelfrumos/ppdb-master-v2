@@ -64,8 +64,47 @@ li {
   list-style: none;
 }
 
-a {
-  text-decoration: none!important;
+.image-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.2);
+  transition: all 1.0s;
+}
+
+.anchor-program {
+  text-decoration:none;
+  color:#000
+}
+
+.card-news {
+  transform: scale(1.1);
+}
+
+.card-news:hover {
+  transition: transform 0.5s;
+}
+
+.anchor-news {
+  text-decoration: none;
+}
+
+.text-limit {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+          line-clamp: 3; 
+  -webkit-box-orient: vertical;
+  font-size: small;
+}
+
+.abcfg-image {
+  height: 230px;
+  width: 100%;
 }
 
 a, p, h1, h2, h3, h4, h5 {
@@ -286,20 +325,25 @@ ol li {
 }
 
 .about-card {
-  background-color: #FDC632!important;
-  color: white!important;
+  color: #002347!important;
   transition: 0.3s!important;
+  font-size: smaller;
 }
 
 .about-card:hover {
   background-color: white!important;
   color: #FDC632!important;
   opacity: 1!important;
+  transform: scale(1.2)!important;
+  transition: all 0.5s!important;
 }
 
 .avatar-image {
-  width: 50px;
-  height: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  vertical-align: middle;
+  width: 35px;
+  height: 35px;
 }
 
 .about-image {
@@ -323,6 +367,16 @@ ol li {
   color: white;
   font-weight: normal;
   font-size: medium;
+}
+.text-grey {
+  color: grey;
+  font-weight: normal;
+  font-size: medium;
+}
+
+.center {
+  text-align: center;
+  
 }
 
 .text-yellow {
@@ -387,20 +441,27 @@ ol li {
 }
 
 .yellow-background {
-  background-color: #FEE9AF;
+  background-color: #fdc632;
+  color: white;
+  transition: 1.3s;
+  transition: all 0.3s ease!important;
 }
 
 .yellow-card {
-  padding: 55px;
   border-radius: 30px;
   transition: 0.5s;
-  height: 375px;
+  height: 100%;
 }
 
 .yellow-background:hover {
-  background-color: white!important;
+  background-color: #ffedba!important;
   color: #FDC632!important;
+  transition: 1.3s;
+}
 
+.program-img {
+  height: 150px;
+  width: 150px;
 }
 
 .colom-card {

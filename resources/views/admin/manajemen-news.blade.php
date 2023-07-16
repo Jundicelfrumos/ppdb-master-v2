@@ -1,4 +1,4 @@
-@extends('admin.main')
+@extends('admin.main-news')
 @include('admin.navbar')
 @include('admin.sidebar')
 @section('main-admin')
@@ -32,16 +32,16 @@
                           @foreach ($berita as $item)
                           <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td><img src="{{asset('images/'. $item->gambar)}}" class="my-2" width="80%" height="60px" style="border-radius:5px"></td>
+                            <td><img src="{{$item->gambar}}" class="my-2" width="100%" height="60px" style="border-radius:5px"></td>
                             <td>{{$item->judul}}</td>
-                            <td>{{$item->caption}}</td>
+                            <td><span class="text-limit">{!! $item->caption !!}</span></td>
                             <td>{{$item->tanggal}}</td>
                             <td>
-                              <a href="{{url('edit-news',$item->id)}}" class="edit-button">
-                                <button class="btn btn-success my-2 mx-1"><i class="fa-solid fa-pen-to-square"></i>
+                              <a href="{{url('edit-news',$item->id)}}" class="p-3 my-1 btn btn-success edit-button">
+                                <i class="fa-solid fa-pen-to-square"></i>
                               </a>
-                              <a href="{{url('delete-news',$item->id)}}" class="delete-button">
-                                <button class="btn btn-danger my-2 mx-1"><i class="fa-solid fa-trash"></i>
+                              <a href="{{url('delete-news',$item->id)}}" class="p-3 my-1 btn btn-danger delete-button">
+                                <i class="fa-solid fa-trash"></i>
                               </a>
                             </td>
                           </tr>

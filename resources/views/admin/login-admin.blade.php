@@ -32,6 +32,6 @@
             </div>
         </div>
      <footer class="justify-content-center d-flex" style=" margin-top: 40px;"> 
-         <p style="font-weight: 500;">© 2023 PPDB SMK Skill Village Boarding School</p>
+         <p style="font-weight: 500;">© 2023 PPDB SMK Skill Village Islamic School</p>
      </footer>
 @endsection 
